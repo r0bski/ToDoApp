@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Core/Core.csproj" />
+  <Project Path="Models/Models.csproj" />
+  <Project Path="ToDoAppGUI/ToDoAppGUI.csproj" />
+  <Project Path="ViewModels/ViewModels.csproj" />
+</Solution>
