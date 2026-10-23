@@ -58,6 +58,9 @@ nunit-*.xml
 # Visual Studio
 .vs/
 
+# NuGet
+packages/
+
 # Build outputs
 bin/
 obj/

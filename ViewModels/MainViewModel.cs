@@ -52,13 +52,18 @@ namespace ViewModels
             }
         }
 
-        public MainViewModel()
+        public MainViewModel(ITodoStorageService storageService)
         {
-            _storageService = new JsonTodoStorageService();
+            _storageService = storageService;
+
             AddTaskCommand = new RelayCommand(AddTask, NewTaskCanExecute);
             DeleteTaskCommand = new RelayCommand(DeleteTask, DeleteTaskCanExecute);
 
             Tasks = new ObservableCollection<ToDoItem>(_storageService.Load());
+        }
+
+        public MainViewModel(): this(new JsonTodoStorageService())
+        {
         }
 
         private void AddTask()
